@@ -2,28 +2,64 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mini Game 🎮</title>
+  <title>Fun Game 🎈</title>
   <link rel="stylesheet" href="assets/css/style.css">
+  <script src="script/main.js" defer></script>
+  <style>
+    #balloons {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 20px;
+    }
+    .balloon {
+      font-size: 40px;
+      margin: 10px;
+      cursor: pointer;
+      transition: transform 0.3s;
+    }
+    .balloon:hover {
+      transform: scale(1.3);
+    }
+
+    @media (max-width: 480px) {
+      .balloon { font-size: 30px; margin: 8px; }
+    }
+  </style>
 </head>
 <body>
-  <nav style="margin-bottom:20px; text-align:center;">
-  <a href="index.html" style="margin: 0 15px; text-decoration:none; color:#d6336c; font-weight:bold;">Home</a>
-  <a href="story.html" style="margin: 0 15px; text-decoration:none; color:#d6336c; font-weight:bold;">Our Story</a>
-  <a href="gallery.html" style="margin: 0 15px; text-decoration:none; color:#d6336c; font-weight:bold;">Gallery</a>
-  <a href="wishes.html" style="margin: 0 15px; text-decoration:none; color:#d6336c; font-weight:bold;">Wishes</a>
-  <a href="game.html" style="margin: 0 15px; text-decoration:none; color:#d6336c; font-weight:bold;">Game</a>
-  <a href="treasure.html" style="margin: 0 15px; text-decoration:none; color:#d6336c; font-weight:bold;">Treasure Hunt</a>
-</nav>
+
+  <div class="top-tags">
+    <span>🎈 Pop Balloons</span>
+    <span>💖 Fun</span>
+    <span>🥰 Betuu</span>
+    <span>🌸 Smile</span>
+    <span>✨ Love</span>
+  </div>
+
+  <div class="navbar">
+    <a href="index.html">Home</a>
+    <a href="story.html">Our Story</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="treasure.html">Treasure</a>
+    <a href="wishes.html">Wishes</a>
+    <a href="game.html">Game</a>
+  </div>
 
   <div class="container">
-    <h1 class="title">🎮 Who Loves You the Most? ❤️</h1>
-    <p>Choose the correct answer 👇</p>
-    <button class="start-btn" onclick="wrongAnswer()">A) Chiku</button>
-    <button class="start-btn" onclick="wrongAnswer()">B) Chiku</button>
-    <button class="start-btn" onclick="rightAnswer()">C) Chiku 😂</button>
+    <h1>🎈 Pop the Balloons!</h1>
+    <p>Click on the balloons to pop them and see a little surprise 💖</p>
+
+    <div id="balloons">
+      <div class="balloon" onclick="alert('Boom! ❤️ Tum meri sabse khaas ho 🥰')">🎈</div>
+      <div class="balloon" onclick="alert('Boom! ❤️ Tum meri sabse khaas ho 🥰')">🎈</div>
+      <div class="balloon" onclick="alert('Boom! ❤️ Tum meri sabse khaas ho 🥰')">🎈</div>
+      <div class="balloon" onclick="alert('Boom! ❤️ Tum meri sabse khaas ho 🥰')">🎈</div>
+      <div class="balloon" onclick="alert('Boom! ❤️ Tum meri sabse khaas ho 🥰')">🎈</div>
+    </div>
+
+    <a href="index.html" class="next-btn">← Back to Home</a>
   </div>
-  <script src="script/main.js"></script>
+
 </body>
 </html>
-
