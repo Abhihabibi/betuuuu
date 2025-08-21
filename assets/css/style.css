@@ -1,91 +1,98 @@
+/* General page setup */
 body {
   margin: 0;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: linear-gradient(135deg, #ffafbd, #ffc3a0);
   font-family: 'Comic Sans MS', cursive, sans-serif;
-  text-align: center;
-  overflow-x: hidden;
-}
-
-.container {
-  background: rgba(255, 255, 255, 0.9);
-  padding: 40px;
-  border-radius: 25px;
-  box-shadow: 0 0 20px rgba(0,0,0,0.2);
-  max-width: 700px;
-}
-
-.title {
-  font-size: 2.5rem;
-  color: #d6336c;
-  animation: glow 2s infinite alternate;
-}
-
-.subtitle {
-  margin: 15px 0;
-  font-size: 1.2rem;
+  background: linear-gradient(135deg, #ffafbd, #ffc3a0);
   color: #333;
-}
-
-.start-btn {
-  padding: 12px 25px;
-  margin: 10px;
-  font-size: 18px;
-  border: none;
-  border-radius: 15px;
-  background: #ff477e;
-  color: white;
-  cursor: pointer;
-  transition: transform 0.3s ease, background 0.3s ease;
-}
-
-.start-btn:hover {
-  background: #d6336c;
-  transform: scale(1.1);
-}
-
-/* Glow effect */
-@keyframes glow {
-  from { text-shadow: 0 0 5px #ff4d6d, 0 0 10px #ff4d6d; }
-  to   { text-shadow: 0 0 15px #ff99ac, 0 0 30px #ff99ac; }
-}
-
-/* Gallery */
-.gallery {
+  text-align: center;
+  min-height: 100vh;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+/* Navigation bar */
+nav {
+  background: rgba(255, 255, 255, 0.8);
+  padding: 15px;
+  border-radius: 20px;
+  margin: 20px auto;
+  display: flex;
+  gap: 20px;
   flex-wrap: wrap;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: bold;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+nav a {
+  color: #d6336c;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: #218838;
+  text-decoration: underline;
+}
+
+/* Romantic top tags (the 5 annoying but cute ones 🤭) */
+.top-tags {
+  display: flex;
   gap: 15px;
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+.top-tags span {
+  background: white;
+  padding: 5px 15px;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  animation: float 3s ease-in-out infinite;
 }
 
-.gallery img {
-  width: 150px;
-  border-radius: 15px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-  transition: transform 0.3s;
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
 }
 
-.gallery img:hover {
-  transform: scale(1.1);
+/* Content box */
+.container {
+  background: white;
+  padding: 30px;
+  margin: 20px auto;
+  border-radius: 20px;
+  max-width: 700px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  animation: fadeIn 1s ease-in-out;
 }
 
-/* Typing animation */
-.typing {
-  border-right: 2px solid black;
-  white-space: nowrap;
-  overflow: hidden;
-  width: 100%;
-  animation: typing 4s steps(40, end), blink 0.75s step-end infinite;
+h1, h2 {
+  color: #d6336c;
 }
 
-@keyframes typing {
-  from { width: 0 }
-  to { width: 100% }
+/* Buttons */
+button, .next-btn {
+  padding: 12px 25px;
+  margin-top: 20px;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+  background: #28a745;
+  color: white;
+  text-decoration: none;
+  display: inline-block;
 }
 
-@keyframes blink {
-  50% { border-color: transparent }
+button:hover, .next-btn:hover {
+  background: #218838;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
 }
