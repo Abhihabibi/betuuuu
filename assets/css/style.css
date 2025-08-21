@@ -119,8 +119,11 @@ button:hover, .next-btn:hover {
   position: fixed;
   bottom: -50px;
   color: #ff4d6d;
-  font-size: 24px;
-  animation: float 6s linear infinite;
+  animation-name: float;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  pointer-events: none; /* Clicks pass through */
+  z-index: 999;
 }
 @keyframes float {
   0% { transform: translateY(0); opacity: 1; }
@@ -143,3 +146,4 @@ button:hover, .next-btn:hover {
   .top-tags { font-size: 14px; gap: 6px; }
   .container { padding: 15px; }
 }
+
