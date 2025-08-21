@@ -2,29 +2,56 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Our Memories 📸</title>
+  <title>Gallery ❤️</title>
   <link rel="stylesheet" href="assets/css/style.css">
+  <script src="script/main.js" defer></script>
+  <style>
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .gallery img {
+      width: 180px;
+      margin: 10px;
+      border-radius: 15px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+      transition: transform 0.3s;
+    }
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+  </style>
 </head>
 <body>
-  <nav style="margin-bottom:20px; text-align:center;">
-  <a href="index.html" style="margin: 0 15px; text-decoration:none; color:#d6336c; font-weight:bold;">Home</a>
-  <a href="story.html" style="margin: 0 15px; text-decoration:none; color:#d6336c; font-weight:bold;">Our Story</a>
-  <a href="gallery.html" style="margin: 0 15px; text-decoration:none; color:#d6336c; font-weight:bold;">Gallery</a>
-  <a href="wishes.html" style="margin: 0 15px; text-decoration:none; color:#d6336c; font-weight:bold;">Wishes</a>
-  <a href="game.html" style="margin: 0 15px; text-decoration:none; color:#d6336c; font-weight:bold;">Game</a>
-  <a href="treasure.html" style="margin: 0 15px; text-decoration:none; color:#d6336c; font-weight:bold;">Treasure Hunt</a>
-</nav>
+
+  <div class="top-tags">
+    <span>📸 Memories</span>
+    <span>💑 Together</span>
+    <span>🥰 Happy Moments</span>
+    <span>🌸 Smiles</span>
+    <span>✨ Forever</span>
+  </div>
+
+  <div class="navbar">
+    <a href="index.html">Home</a>
+    <a href="story.html">Our Story</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="treasure.html">Treasure</a>
+    <a href="wishes.html">Wishes</a>
+    <a href="game.html">Game</a>
+  </div>
 
   <div class="container">
-    <h1 class="title">📸 Our Beautiful Memories ❤️</h1>
+    <h1>📸 Our Memories</h1>
     <div class="gallery">
       <img src="assets/images/photo1.jpg" alt="Memory 1">
       <img src="assets/images/photo2.jpg" alt="Memory 2">
       <img src="assets/images/photo3.jpg" alt="Memory 3">
+      <img src="assets/images/photo4.jpg" alt="Memory 4">
     </div>
-    <button class="start-btn" onclick="goToWishes()">Next ➡️</button>
+    <a href="treasure.html" class="next-btn">Next → Treasure</a>
   </div>
+
 </body>
 </html>
-
