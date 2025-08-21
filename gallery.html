@@ -12,14 +12,23 @@
       justify-content: center;
     }
     .gallery img {
-      width: 180px;
-      margin: 10px;
+      width: 40%;        /* thodi chhoti images */
+      max-width: 150px;  /* max size */
+      margin: 5px;
       border-radius: 15px;
       box-shadow: 0 0 10px rgba(0,0,0,0.2);
       transition: transform 0.3s;
     }
     .gallery img:hover {
       transform: scale(1.05);
+    }
+
+    @media (max-width: 768px) {
+      .gallery img { width: 45%; max-width: 130px; }
+    }
+
+    @media (max-width: 480px) {
+      .gallery img { width: 90%; max-width: 120px; }
     }
   </style>
 </head>
@@ -48,8 +57,10 @@
       <img src="assets/images/photo1.jpg" alt="Memory 1">
       <img src="assets/images/photo2.jpg" alt="Memory 2">
       <img src="assets/images/photo3.jpg" alt="Memory 3">
-      <img src="assets/images/photo4.jpg" alt="Memory 4">
+      
     </div>
+
+    <!-- Corrected Next Button -->
     <a href="treasure.html" class="next-btn">Next → Treasure</a>
   </div>
 
