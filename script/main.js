@@ -1,14 +1,20 @@
-// Floating hearts animation
+// Floating hearts animation for all pages
 function createHeart() {
   const heart = document.createElement('div');
   heart.className = 'heart';
   heart.innerText = '❤️';
 
-  // Randomize position and size
+  // Random horizontal position
   heart.style.left = Math.random() * 100 + 'vw';
-  heart.style.fontSize = (20 + Math.random() * 30) + 'px'; // size 20px → 50px
-  heart.style.animationDuration = (4 + Math.random() * 4) + 's'; // speed 4s → 8s
-  heart.style.opacity = Math.random() * 0.5 + 0.5; // 0.5 → 1
+
+  // Random size 30px → 70px
+  heart.style.fontSize = (30 + Math.random() * 40) + 'px';
+
+  // Random animation duration 4s → 8s
+  heart.style.animationDuration = (4 + Math.random() * 4) + 's';
+
+  // Random opacity
+  heart.style.opacity = Math.random() * 0.5 + 0.5;
 
   document.body.appendChild(heart);
 
@@ -18,5 +24,5 @@ function createHeart() {
   }, 8000);
 }
 
-// Create more hearts, faster
-setInterval(createHeart, 200); // Every 0.2s a heart appears
+// Create hearts faster for more quantity
+setInterval(createHeart, 150); // Every 0.15s a heart appears
